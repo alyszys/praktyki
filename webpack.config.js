@@ -1,32 +1,33 @@
 const path = require('path');
-//const toml = require('toml');
-//const yaml = require('yamljs');
-//const json5 = require('json5');
-//const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 
 module.exports = {
-  //entry: './src/index.js',
   mode: 'development',
   entry: {
     index: './src/index.js',
-    print: './src/print.js',
   },
   devtool: 'inline-source-map',
   devServer: {
-    contentBase: './dist',
+    contentBase: path.join(__dirname, 'dist'),
+    watchContentBase: true,
+    contentBase: path.resolve(__dirname, "src/views"),
+    index: 'index.html',
+    hot: true,
+    compress: true,
+    port: 9000,
   },
   plugins: [
-   /* new HtmlWebpackPlugin({
-      //title: 'Output Management',
-	  title: 'Development',
-    }), */
+    new HtmlWebpackPlugin({
+      title: 'Development',
+      filename: 'index.html',
+      template: 'src/views/index.html'
+    }),
   ],
   output: {
-   //filename: 'bundle.js
-   filename: '[name].bundle.js',
-   path: path.resolve(__dirname, 'dist'),
-   publicPath: '/',
+    filename: '[name].bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '/',
   },
   module: {
     rules: [
@@ -34,45 +35,31 @@ module.exports = {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
       },
-	  {
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          // Creates `style` nodes from JS strings
+          "style-loader",
+          // Translates CSS into CommonJS
+          "css-loader",
+          // Compiles Sass to CSS
+          "sass-loader",
+        ],
+      },
+      {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
       },
-	   {
+      {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         use: {
           loader: 'url-loader',
         },
       },
-	  /*{
-        test: /\.(csv|tsv)$/i,
-        use: ['csv-loader'],
-      },
       {
-        test: /\.xml$/i,
-        use: ['xml-loader'],
+        test: /\.html$/i,
+        loader: 'html-loader',
       },
-	  {
-        test: /\.toml$/i,
-        type: 'json',
-        parser: {
-          parse: toml.parse,
-        },
-      },
-      {
-        test: /\.yaml$/i,
-        type: 'json',
-        parser: {
-          parse: yaml.parse,
-        },
-      },
-      {
-        test: /\.json5$/i,
-        type: 'json',
-        parser: {
-          parse: json5.parse,
-        }, 
-      }, */
     ],
   },
 };
