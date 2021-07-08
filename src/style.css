@@ -1,9 +1,7 @@
 
 @font-face {
   font-family: 'MyFont';
-  src: url('./assets/Roboto-Regular.ttf') format('ttf'),
-    url('./assets/my-font.woff2') format('woff2'),
-    url('./assets/my-font.woff') format('woff');
+  src: url('../asset/resource/Roboto-Italic.ttf') format('ttf');
   font-weight: 600;
   font-style: normal;
 }
