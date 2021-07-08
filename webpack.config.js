@@ -69,8 +69,8 @@ module.exports = {
         type: 'json',
         parser: {
           parse: json5.parse,
-        },
-      },
+        }, 
+      }, 
     ],
   },
 };
