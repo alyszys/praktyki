@@ -1,8 +1,8 @@
 const path = require('path');
-const toml = require('toml');
-const yaml = require('yamljs');
-const json5 = require('json5');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+//const toml = require('toml');
+//const yaml = require('yamljs');
+//const json5 = require('json5');
+//const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 
 module.exports = {
@@ -17,10 +17,10 @@ module.exports = {
     contentBase: './dist',
   },
   plugins: [
-    new HtmlWebpackPlugin({
+   /* new HtmlWebpackPlugin({
       //title: 'Output Management',
 	  title: 'Development',
-    }),
+    }), */
   ],
   output: {
    //filename: 'bundle.js
@@ -42,7 +42,7 @@ module.exports = {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
       },
-	  {
+	  /*{
         test: /\.(csv|tsv)$/i,
         use: ['csv-loader'],
       },
@@ -70,7 +70,7 @@ module.exports = {
         parser: {
           parse: json5.parse,
         }, 
-      }, 
+      }, */
     ],
   },
 };
