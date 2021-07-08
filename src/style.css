@@ -1,7 +1,8 @@
 
 @font-face {
   font-family: 'MyFont';
-  src: url('./components/my-component/my-font.woff2') format('woff2'),
+  src: url('./assets/Roboto-Regular.ttf') format('ttf'),
+    url('./components/my-component/my-font.woff2') format('woff2'),
     url('./components/my-component/my-font.woff') format('woff');
   font-weight: 600;
   font-style: normal;
