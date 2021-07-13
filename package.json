@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/alyszys/praktyki/issues"
   },
-  "homepage": "https://github.com/alyszys/praktyki#readme",
+  "homepage": "https://github.com/alyszys/praktyki/src/views/index.html",
   "devDependencies": {
     "css-loader": "^5.2.6",
     "csv-loader": "^3.0.3",
