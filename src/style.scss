@@ -37,7 +37,7 @@ body {
   color: $text;
   font-family: 'MyFont';
   background-color: $primary_1;
-  background-image: url('./waves.png');
+  background-image: url('../assets/images/waves.png');
 }
 
 .menu {
@@ -47,8 +47,8 @@ body {
   left: 0;
   z-index: 1;
 }
-
-.menu li{
+.menu {
+ li{
   @include border(black);
   margin-bottom: 1vh;
   width: 100%;
@@ -57,11 +57,11 @@ body {
   background-color: $primary_1;
   
 }
-
-.menu a{
+ a{
   text-decoration: none;
   color: $text;
   font-weight: bold;
+}
 }
 
 .wiz {
@@ -73,13 +73,16 @@ body {
   padding: 9vh 0;
   background-color: $primary_1;
 }
-.wiz h2 {
-  font-size: 3.7em;
-}
-.wiz p {
-  font-size: 18px;
-  font-style: italic;
-  padding-top: 7px;
+
+.wiz {
+  h2 {
+    font-size: 3.7em;
+  }
+  p {
+    font-size: 18px;
+    font-style: italic;
+    padding-top: 7px;
+  }
 }
 /*img {
   z-index: -1;
@@ -100,7 +103,7 @@ body {
   
   
   .lewo1 {
-    @include border(black);
+    //@include border(black);
     height: 7%;
     width: 100%;
     
@@ -114,15 +117,15 @@ body {
   }
 
   .prawo1 {
-    @include border(black);
+   // @include border(black);
     height: 93%;
     width: 100%;
     display: grid;
     grid-row-gap: 4vw;
     padding: 0 8vw 2vw;
   }
-  
-  .prawo1>div>div {
+  .prawo1 {
+  >div>div {
     color: $text;
     text-align: center;
     font-weight: bold;
@@ -134,9 +137,11 @@ body {
     background-color: rgba($color: #ffffff, $alpha: 0.6);
     }
 
-    .prawo1>div>div>p {
+    >div>div>p {
       line-height: 8vh;
     }
+  }
+
     footer div {
      // @include border(black);
        width: 100%;
@@ -192,7 +197,9 @@ body {
     grid-row-gap: 4vw;
     padding: 0 4vw 2vw;
   }
-  .prawo1>div>div {
+
+  .prawo1 {
+  >div>div {
     color: $text;
     text-align: center;
     font-weight: bold;
@@ -205,9 +212,11 @@ body {
     
     }
   
-    .prawo1>div>div>p {
+    >div>div>p {
       line-height: 10vh;
     }
+  }
+
     footer div {
       // @include border(black);
        width: 50%;
@@ -225,7 +234,9 @@ body {
     }
   
 }
-.prawo1>div {
+
+.prawo1{
+ >div {
   //@include border(black);
   display: grid;
   grid-column: auto;
@@ -236,10 +247,10 @@ body {
   opacity: 0.8;
 }
 
-.prawo1 div:hover {
+ div:hover {
   opacity: 1;
 }
-
+}
 
 
 
@@ -251,63 +262,63 @@ footer div a {
 
 
 #prawo1_1 {
-  background-image: url(./tynk1.jpg);
+  background-image: url(../assets/images/tynk1.jpg);
   
 }
 #prawo1_2 {
-  background-image: url(./tynk2.jpg);
+  background-image: url(../assets/images/tynk2.jpg);
 
 }
 #prawo1_3 {
-  background-image: url(./tynk_m.jpg);
+  background-image: url(../assets/images/tynk_m.jpg);
 
 }
 #prawo1_4 {
-  background-image: url(./tynk_a.jpg);
+  background-image: url(../assets/images/tynk_a.jpg);
 
 }
 #prawo1_5 {
-  background-image: url(./tynk_g.jpg);
+  background-image: url(../assets/images/tynk_g.jpg);
 
 }
 #prawo1_6 {
-  background-image: url(./tynk_c.jpg);
+  background-image: url(../assets/images/tynk_c.jpg);
 
 }
 #mal1 {
-  background-image: url(./obr_h.jpg);
+  background-image: url(../assets/images/obr_h.jpg);
 }
 #mal2 {
-  background-image: url(./obr_pe.jpg);
+  background-image: url(../assets/images/obr_pe.jpg);
 }
 #mal3 {
-  background-image: url(./obr_po.jpg);
+  background-image: url(../assets/images/obr_po.jpg);
 }
 #mal4 {
-  background-image: url(./obr_m.jpg);
+  background-image: url(../assets/images/obr_m.jpg);
 }
 #mal5 {
-  background-image: url(./obr_mo.png);
+  background-image: url(../assets/images/obr_mo.png);
 }
 #mal6 {
-  background-image: url(./graffiti.jpg);
+  background-image: url(../assets/images/graffiti.jpg);
 }
 #akr1 {
-  background-image: url(./akr_p.jpg);
+  background-image: url(../assets/images/akr_p.jpg);
 }
 #akr2 {
-  background-image: url(./akr_k.jpg);
+  background-image: url(../assets/images/akr_k.jpg);
 }
 #akr3 {
-  background-image: url(./akr_s.jpg);
+  background-image: url(../assets/images/akr_s.jpg);
 }
 #akr4 {
-  background-image: url(./akr_a.jpg);
+  background-image: url(../assets/images/akr_a.jpg);
 }
 #akr5 {
-  background-image: url(./akr_sz.jpg);
+  background-image: url(../assets/images/akr_sz.jpg);
 }
 #akr6 {
-  background-image: url(./akr_w.jpg);
+  background-image: url(../assets/images/akr_w.jpg);
 }
 
