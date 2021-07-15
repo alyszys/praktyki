@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/alyszys/praktyki/src/views/index.html",
   "devDependencies": {
+    "bootstrap": "^5.0.2",
     "css-loader": "^5.2.6",
     "csv-loader": "^3.0.3",
     "express": "^4.17.1",
