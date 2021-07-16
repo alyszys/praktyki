@@ -151,6 +151,7 @@ body {
   }
 }
 
+
 footer {
   
   text-align: center;
@@ -169,6 +170,37 @@ a {
   margin-top: 3vh;
 }
 }
+
+#button {
+  height: 8vh;
+  width: 8vh;
+  border-radius: 50%;
+  z-index: 1000;
+  position: fixed;
+  float: right;
+  bottom: 6vh;
+  right: 3vw;
+  background-color: lightblue;
+  border: none;
+  text-decoration: none;
+  color: $text;
+  // display: none;
+  
+  
+  p {
+    line-height: 10vh;
+    font-size: 3em;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+  }
+
+ &:hover {
+   background-color: lightcyan;
+ }
+}
+
+
 
 #prawo1_1 {
   background-image: url(../assets/images/tynk1.jpg);
