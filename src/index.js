@@ -307,7 +307,7 @@ var margin = {top: 20, right: 20, bottom: 30, left: 50},
     height = 500 - margin.top - margin.bottom;
 
 // parse the date / time
-var parseTime = d3.timeParse("%y-%m");
+var parseTime = d3.timeParse("%B");
 
 // set the ranges
 var x = d3.scaleTime().range([0, width]);
@@ -329,7 +329,7 @@ var svg = d3.select("#diagram").append("svg")
           "translate(" + margin.left + "," + margin.top + ")");
 
 // Get the data
-d3.csv("../assets/data/data2.csv", function(error, data) {
+d3.json("../assets/data/data3.json", function(error, data) {
   if (error) throw error;
 
   // format the data
