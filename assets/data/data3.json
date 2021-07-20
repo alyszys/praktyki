@@ -1,0 +1,10 @@
+{"data": [
+  { "date": "styczeń", "paint": 27},
+  { "date": "luty", "paint": 14},
+  { "date": "marzec", "paint": 17},
+  { "date": "kwiecień", "paint": 22},
+  { "date": "maj", "paint": 38},
+  { "date": "czerwiec", "paint": 32},
+  { "date": "lipiec", "paint": 43}
+]
+}

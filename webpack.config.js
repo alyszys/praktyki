@@ -60,6 +60,15 @@ module.exports = {
         test: /\.html$/i,
         loader: 'html-loader',
       },
+      {
+        test: /\.(txt|csv)$/,
+        use: [
+          {
+            loader: 'raw-loader',
+            options: {}
+          }
+        ]
+      },
     ],
   },
 };
