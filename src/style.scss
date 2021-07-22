@@ -151,8 +151,16 @@ body {
   }
 }
 
-#diagram {
-  background-color: whitesmoke;
+.diag {
+  background-color: $primary_1;
+  width: 100%;
+  height: 300px;
+  border: 1px solid lightpink;
+  
+
+  .bar {
+    fill: lightpink;
+  }
 }
 footer {
   
@@ -264,4 +272,3 @@ a {
 #akr6 {
   background-image: url(../assets/images/akr_w.jpg);
 }
-
