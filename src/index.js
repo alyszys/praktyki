@@ -387,7 +387,8 @@ const yScale = d3
 const container = d3.select('svg')
   .classed('diag', true)
   .append('svg')
-  .attr("ViewBox", `0 0 780 350`);
+  .classed('bar_chart', true)
+  .attr("ViewBox", `0 0 752 350`);
 
 const bars = container
   .selectAll('.bar')
