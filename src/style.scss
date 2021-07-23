@@ -156,13 +156,18 @@ h2 {
     margin: 0 auto 9px ;
   }
 }
+.chart {
+  
+  background-color: $primary_1;
+}
 
 .diag {
   background-color: $primary_1;
   height: 350px;
+  width: 902px;
   // border: 1px solid lightpink;
   padding-top: 20px;
-  
+  margin: 0 16% 0;
   
   .bar {
     fill: #62d1e9;

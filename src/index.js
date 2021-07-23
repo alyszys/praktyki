@@ -361,9 +361,7 @@ $(document).ready(($) => {
 // });
 
 //----------------------------------oby ostatnie-------------------
-var margin = {top: 20, right: 20, bottom: 50, left: 100},
-    width = parseInt(d3.select(".diag").style("width")) - margin.left - margin.right,
-    height = parseInt(d3.select(".diag").style("height")) - margin.top - margin.bottom;
+
 
 
 const DATA = [
@@ -379,7 +377,7 @@ const DATA = [
 const xScale = d3
   .scaleBand()
   .domain(DATA.map((dataPoint) => dataPoint.month))
-  .rangeRound([0, 700])
+  .range([0, 900])
   .padding(0.2);
 
 const yScale = d3
