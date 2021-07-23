@@ -1,6 +1,6 @@
 import "./style.scss";
 console.log('index.js loaded');
-import $ from "jquery";
+import $, { data } from "jquery";
 import * as d3 from "d3";
 // import config from "../config.json";
 import { color } from "d3";
@@ -373,28 +373,73 @@ const DATA = [
 ];
 
 const xScale = d3
-.scaleBand()
-.domain(DATA.map((dataPoint) => dataPoint.month))
-.rangeRound([0, 650])
-.padding(0.1);
+  .scaleBand()
+  .domain(DATA.map((dataPoint) => dataPoint.month))
+  .rangeRound([0, 700])
+  .padding(0.2);
 
 const yScale = d3
-.scaleLinear()
-.domain([0, 45])
-.range([300, 0]);
+  .scaleLinear()
+  .domain([0, 43])
+  .range([300, 0]);
 
 
 const container = d3.select('svg')
-  .classed('diag', true);
+  .classed('diag', true)
+  .append('svg')
+  .attr("ViewBox", `0 0 780 350`);
 
 const bars = container
-.selectAll('.bar')
-.data(DATA)
-.enter()
-.append('rect')
-.classed('bar', true)
-.attr('width', xScale.bandwidth())
-.attr('height',(data) => 300 - yScale(data.value))
-.attr('y', data => yScale(data.value))
-.attr('x', data => xScale(data.month))
-;
+  .selectAll('.bar')
+  .data(DATA)
+  .enter()
+  .append('rect')
+  .classed('bar', true)
+  .attr('width', xScale.bandwidth())
+  .attr('height',(data) => 300 - yScale(data.value))
+  .attr('y', data => yScale(data.value))
+  .attr('x', data => xScale(data.month))
+  ;
+
+var y_axis = d3.axisLeft()
+  .scale(yScale);
+
+container.append("g")
+  .attr("transform", "translate(19, 0)")
+  .call(y_axis);
+       
+
+var x_axis = d3.axisBottom()
+  .scale(xScale);
+
+container.append("g")
+  .attr("transform", "translate(0, 300)")
+  .call(x_axis);
+
+
+
+// bars.selectAll("text")
+// .data(DATA)
+// .enter()
+// .append("svg:text")
+// .attr("x", function(datum, index ) { return xScale(index) + xScale.bandWidth(); })
+// .attr("y", function(datum) { return height - yScale(datum.value); })
+// .attr("dx", -xScale.bandwidth()/2)
+// .attr("dy", "1.2em")
+// .attr("text-anchor", "middle")
+// .text(function(datum) { return datum.value; })
+// .attr("fill", "black");
+
+
+// bars.selectAll("text.yAxis").
+// data(DATA).
+// enter().append("svg:text").
+// attr("x", function(datum, index) { return xScale(index) + xScale.bandWidth(); }).
+// attr("y", height).
+// attr("dx", -xScale.bandwidth()/2).
+// attr("text-anchor", "middle").
+// attr("style", "font-size: 12;").
+// text(function(datum) { return datum.month;}).
+// attr("transform", "translate(0, 18)").
+// attr("class", "yAxis");
+
