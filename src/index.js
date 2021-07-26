@@ -377,8 +377,9 @@ const DATA = [
 const xScale = d3
   .scaleBand()
   .domain(DATA.map((dataPoint) => dataPoint.month))
-  .range([0, 900])
-  .padding(0.2);
+  .range([0, 420])
+  .padding(0.2)
+  .align(0.79);
 
 const yScale = d3
   .scaleLinear()
@@ -390,7 +391,9 @@ const container = d3.select('svg')
   .classed('diag', true)
   .append('svg')
   .classed('bar_chart', true)
-  .attr("ViewBox", `0 0 752 350`);
+  .attr("ViewBox", `0 0 902 350`)
+  
+  ;
 
 const bars = container
   .selectAll('.bar')

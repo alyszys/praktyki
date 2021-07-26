@@ -118,7 +118,7 @@ h2 {
   height: 40vh; 
 }
 &>div>div {
-  margin: 0 auto 9px ;
+  margin: 0 auto 9px;
   background-size: cover;
   position: relative;
   opacity: 0.9;
@@ -129,7 +129,7 @@ h2 {
     width: 100%;
     bottom: 0;
     position: absolute;
-    
+    float: left;
   }
   div p {
     font-size: 1.4em;
@@ -161,13 +161,18 @@ h2 {
   background-color: $primary_1;
 }
 
+#chart2 {
+  width: fit-content;
+  margin: auto;
+}
+
 .diag {
   background-color: $primary_1;
   height: 350px;
-  width: 902px;
+  width: 420px;
   // border: 1px solid lightpink;
   padding-top: 20px;
-  margin: 0 16% 0;
+  margin: auto;
   
   .bar {
     fill: #62d1e9;
@@ -177,12 +182,13 @@ h2 {
     fill: lightpink;
   }
   .bar_chart {
-    margin-left: 30px;
+    margin-left: 30%;
     border: black;
   }
 
   .tick {
     color: rgb(12, 106, 112);
+    
   }
 }
 footer {
