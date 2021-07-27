@@ -1,6 +1,6 @@
 import "./style.scss";
 console.log('index.js loaded');
-import $ from "jquery";
+import $ from "jQuery";
 import * as d3 from "d3";
 // import config from "../config.json";
 import { color } from "d3";
@@ -407,7 +407,7 @@ const bars = container
   .attr('x', data => xScale(data.month))
   ;
 
-var y_axis = d3.axisLeft()
+var y_axis = d3.axisLeft(yScale)
   .scale(yScale);
 
 container.append("g")
@@ -415,7 +415,7 @@ container.append("g")
   .call(y_axis);
        
 
-var x_axis = d3.axisBottom()
+var x_axis = d3.axisBottom(xScale)
   .scale(xScale);
 
 container.append("g")
