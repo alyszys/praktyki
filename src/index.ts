@@ -1,6 +1,6 @@
 import "./style.scss";
 console.log('index.js loaded');
-import $ from "jQuery";
+import $ from 'jQuery';
 import * as d3 from "d3";
 // import config from "../config.json";
 import { color } from "d3";
